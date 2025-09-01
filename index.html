@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimation Automobile - Valeur de votre voiture en 24h</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Vendez votre voiture en <span class="highlight">24h</span></h1>
+            <p>Obtenez une estimation précise et professionnelle de votre véhicule</p>
+            <a href="#form" class="cta-button">Estimer ma voiture</a>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps">
+        <h2>Comment ça marche ?</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h3>1. Remplissez le formulaire</h3>
+                <p>Donnez-nous les détails de votre véhicule en quelques clics</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>2. Recevez une estimation</h3>
+                <p>Notre équipe d'experts vous répond sous 24h</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3>3. Vendez votre voiture</h3>
+                <p>Finalisez la vente rapidement et en toute sécurité</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form" class="form-section">
+        <div>
+            <h2>Estimation gratuite de votre véhicule</h2>
+            <form id="estimationForm" class="form-container">
+            <div class="form-group">
+                <label for="prenom">Prénom*</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="nom">Nom*</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="marque">Marque*</label>
+                <input type="text" id="marque" name="marque" required>
+            </div>
+            <div class="form-group">
+                <label for="modele">Modèle*</label>
+                <input type="text" id="modele" name="modele" required>
+            </div>
+            <div class="form-group">
+                <label for="immatriculation">Immatriculation*</label>
+                <input type="text" id="immatriculation" name="immatriculation" required placeholder="AA-123-BB">
+            </div>
+            <div class="form-group">
+                <label for="code_postal">Code Postal*</label>
+                <input type="text" id="code_postal" name="code_postal" required pattern="[0-9]{5}" placeholder="75000">
+            </div>
+            <div class="form-group">
+                <label for="annee">Année*</label>
+                <input type="number" id="annee" name="annee" min="1900" max="2025" required>
+            </div>
+            <div class="form-group">
+                <label for="kilometrage">Kilométrage*</label>
+                <input type="number" id="kilometrage" name="kilometrage" required>
+            </div>
+            <div class="form-group">
+                <label for="etat">État général*</label>
+                <select id="etat" name="etat" required>
+                    <option value="">Sélectionnez</option>
+                    <option value="excellent">Excellent</option>
+                    <option value="bon">Bon</option>
+                    <option value="moyen">Moyen</option>
+                    <option value="mauvais">À rénover</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="telephone">
+            </div>
+            <div class="form-group full-width consent-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <span>J'accepte d'être contacté pour recevoir mon estimation*</span>
+                </label>
+            </div>
+            <div class="form-group full-width">
+                <button type="submit" class="submit-button">Obtenir mon estimation</button>
+            </div>
+            <div class="form-group full-width">
+                <p class="form-notice">* Champs obligatoires. Réponse garantie sous 24h.</p>
+            </div>
+        </form>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-target="15000">0</div>
+                <div class="stat-label">Véhicules estimés</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="98">0</div>
+                <div class="stat-label">Clients satisfaits</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="24">0</div>
+                <div class="stat-label">Délai de réponse</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-label">Experts automobiles</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>Avis de nos clients</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Estimation rapide et prix juste. Je recommande !"</p>
+                <div class="client-info">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Pierre D.">
+                    <span>Pierre D.</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Service professionnel et efficace. Vendu en moins d'une semaine."</p>
+                <div class="client-info">
+                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Marie L.">
+                    <span>Marie L.</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Très satisfait de l'estimation. Prix conforme au marché."</p>
+                <div class="client-info">
+                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Thomas B.">
+                    <span>Thomas B.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2>Questions fréquentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Comment est calculée l'estimation de ma voiture ?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Notre équipe d'experts utilise les données du marché en temps réel, l'état du véhicule et son historique pour établir une estimation précise.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Combien coûte l'estimation ?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>L'estimation est totalement gratuite et sans engagement de votre part.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Dans quel délai vais-je recevoir l'estimation ?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Vous recevrez une estimation détaillée sous 24h maximum après l'envoi de votre demande.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Nos avantages</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Prix du marché</h3>
+                <p>Estimation basée sur les données actuelles du marché</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-clock"></i>
+                <h3>Réponse rapide</h3>
+                <p>Estimation détaillée en moins de 24h</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-check-circle"></i>
+                <h3>Sans engagement</h3>
+                <p>Service gratuit et sans obligation d'achat</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-user-tie"></i>
+                <h3>Experts qualifiés</h3>
+                <p>Une équipe de professionnels à votre service</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Prêt à connaître la valeur de votre voiture ?</h2>
+            <p>Obtenez une estimation gratuite en moins de 24h</p>
+            <a href="#form" class="cta-button">Estimer ma voiture maintenant</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 01 23 45 67 89</p>
+                <p>✉️ contact@estimation-auto.fr</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens utiles</h4>
+                <ul>
+                    <li><a href="#form">Estimation gratuite</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Estimation Auto. Tous droits réservés.</p>
+            <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
