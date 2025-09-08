@@ -3,271 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estimation Automobile - Valeur de votre voiture en 24h</title>
+    <title>Autovisy - Rachat cash & vente sécurisée de véhicules</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- En-tête de navigation -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images.png" alt="Autovisy" class="logo">
+            </a>
+            <button class="menu-toggle" aria-label="Menu">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Vendre mon véhicule</a></li>
+                    <li><a href="recherche.html">Trouver un véhicule</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section 1 - Hero -->
+    <section id="hero" class="hero">
         <div class="hero-content">
-            <h1>Vendez votre voiture en <span class="highlight">24h</span></h1>
-            <p>Obtenez une estimation précise et professionnelle de votre véhicule</p>
-            <a href="#form" class="cta-button">Estimer ma voiture</a>
+            <img src="assets/images.png" alt="Logo Autovisy" class="logo">
+            <h1>Rachat cash & vente sécurisée de véhicules</h1>
+            <h2>Estimation rapide, paiement garanti, accompagnement premium.</h2>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">👉 Vendre mon véhicule cash</a>
+                <a href="#contact" class="btn btn-secondary">👉 Confier mon véhicule à la vente</a>
+            </div>
         </div>
     </section>
 
-    <!-- Steps Section -->
-    <section class="steps">
-        <h2>Comment ça marche ?</h2>
-        <div class="steps-container">
-            <div class="step-card">
-                <div class="step-icon">
-                    <i class="fas fa-clipboard-list"></i>
+    <!-- Section 2 - Présentation -->
+    <section id="about" class="about">
+        <h2>Qui sommes-nous ?</h2>
+        <div class="about-content">
+            <p>Chez Autovisy, nous simplifions la vie des automobilistes. Notre mission est claire : vous offrir une solution rapide, sécurisée et transparente pour vendre votre véhicule.</p>
+            <p>Que ce soit pour un rachat immédiat en cash ou une vente par mandat avec accompagnement premium, nous nous occupons de tout : estimation, démarches administratives, mise en avant de votre voiture et sécurisation du paiement.</p>
+        </div>
+    </section>
+
+    <!-- Section 3 - Services -->
+    <section id="services" class="services">
+        <h2>Nos Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Rachat Cash de véhicules</h3>
+                <ul>
+                    <li>Estimation gratuite et rapide</li>
+                    <li>Offre ferme sous 24h</li>
+                    <li>Paiement immédiat et sécurisé</li>
+                    <li>Sans obligation d'achat</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Vente par mandat</h3>
+                <ul>
+                    <li>Mise en avant de votre véhicule auprès de notre réseau premium</li>
+                    <li>Négociation et gestion complète de la vente</li>
+                    <li>Sécurisation du paiement et accompagnement administratif</li>
+                    <li>Zéro stress, vous gardez la maîtrise du prix</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4 - Pourquoi nous choisir -->
+    <section id="why-us" class="why-us">
+        <h2>Pourquoi choisir Autovisy ?</h2>
+        <div class="why-us-container">
+            <div class="why-us-card">
+                <div class="why-us-icon">
+                    <i class="fas fa-shield-alt"></i>
                 </div>
-                <h3>1. Remplissez le formulaire</h3>
-                <p>Donnez-nous les détails de votre véhicule en quelques clics</p>
+                <h3>Sécurité garantie</h3>
+                <p>Transactions sécurisées et paiement immédiat</p>
             </div>
-            <div class="step-card">
-                <div class="step-icon">
-                    <i class="fas fa-clock"></i>
+            <div class="why-us-card">
+                <div class="why-us-icon">
+                    <i class="fas fa-euro-sign"></i>
                 </div>
-                <h3>2. Recevez une estimation</h3>
-                <p>Notre équipe d'experts vous répond sous 24h</p>
+                <h3>Meilleur prix</h3>
+                <p>Évaluation précise et offre au meilleur prix du marché</p>
             </div>
-            <div class="step-card">
-                <div class="step-icon">
-                    <i class="fas fa-car"></i>
+            <div class="why-us-card">
+                <div class="why-us-icon">
+                    <i class="fas fa-bolt"></i>
                 </div>
-                <h3>3. Vendez votre voiture</h3>
-                <p>Finalisez la vente rapidement et en toute sécurité</p>
+                <h3>Rapidité</h3>
+                <p>Vente express en 48h maximum</p>
+            </div>
+            <div class="why-us-card">
+                <div class="why-us-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3>Expertise</h3>
+                <p>Équipe d'experts à votre écoute</p>
             </div>
         </div>
     </section>
 
-    <!-- Form Section -->
-    <section id="form" class="form-section">
-        <div>
-            <h2>Estimation gratuite de votre véhicule</h2>
-            <form id="estimationForm" class="form-container">
-            <div class="form-group">
-                <label for="prenom">Prénom*</label>
-                <input type="text" id="prenom" name="prenom" required>
-            </div>
-            <div class="form-group">
-                <label for="nom">Nom*</label>
-                <input type="text" id="nom" name="nom" required>
-            </div>
-            <div class="form-group">
-                <label for="marque">Marque*</label>
-                <input type="text" id="marque" name="marque" required>
-            </div>
-            <div class="form-group">
-                <label for="modele">Modèle*</label>
-                <input type="text" id="modele" name="modele" required>
-            </div>
-            <div class="form-group">
-                <label for="immatriculation">Immatriculation*</label>
-                <input type="text" id="immatriculation" name="immatriculation" required placeholder="AA-123-BB">
-            </div>
-            <div class="form-group">
-                <label for="code_postal">Code Postal*</label>
-                <input type="text" id="code_postal" name="code_postal" required pattern="[0-9]{5}" placeholder="75000">
-            </div>
-            <div class="form-group">
-                <label for="annee">Année*</label>
-                <input type="number" id="annee" name="annee" min="1900" max="2025" required>
-            </div>
-            <div class="form-group">
-                <label for="kilometrage">Kilométrage*</label>
-                <input type="number" id="kilometrage" name="kilometrage" required>
-            </div>
-            <div class="form-group">
-                <label for="etat">État général*</label>
-                <select id="etat" name="etat" required>
-                    <option value="">Sélectionnez</option>
-                    <option value="excellent">Excellent</option>
-                    <option value="bon">Bon</option>
-                    <option value="moyen">Moyen</option>
-                    <option value="mauvais">À rénover</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="email">Email*</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="telephone">Téléphone</label>
-                <input type="tel" id="telephone" name="telephone">
-            </div>
-            <div class="form-group full-width consent-group">
-                <label class="checkbox-label">
-                    <input type="checkbox" id="consent" name="consent" required>
-                    <span>J'accepte d'être contacté pour recevoir mon estimation*</span>
-                </label>
-            </div>
-            <div class="form-group full-width">
-                <button type="submit" class="submit-button">Obtenir mon estimation</button>
-            </div>
-            <div class="form-group full-width">
-                <p class="form-notice">* Champs obligatoires. Réponse garantie sous 24h.</p>
-            </div>
-        </form>
-        </div>
-    </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stats-container">
-            <div class="stat-item">
-                <div class="stat-number" data-target="15000">0</div>
-                <div class="stat-label">Véhicules estimés</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="98">0</div>
-                <div class="stat-label">Clients satisfaits</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="24">0</div>
-                <div class="stat-label">Délai de réponse</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="15">0</div>
-                <div class="stat-label">Experts automobiles</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2>Avis de nos clients</h2>
-        <div class="testimonials-container">
+    <!-- Section 6 - Témoignages -->
+    <section id="testimonials" class="testimonials">
+        <h2>Ils nous ont fait confiance</h2>
+        <div class="testimonials-grid">
             <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p>"Estimation rapide et prix juste. Je recommande !"</p>
-                <div class="client-info">
-                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Pierre D.">
-                    <span>Pierre D.</span>
+                <div class="testimonial-header">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Marie D." class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <h3>Marie D.</h3>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
+                <p class="testimonial-text">"J'ai vendu ma BMW Série 3 en 48h avec Autovisy. Paiement rapide et zéro tracas. Je recommande vivement !"</p>
+                <div class="testimonial-car">BMW Série 3 - 2020</div>
             </div>
+
             <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p>"Service professionnel et efficace. Vendu en moins d'une semaine."</p>
-                <div class="client-info">
-                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Marie L.">
-                    <span>Marie L.</span>
+                <div class="testimonial-header">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Thomas L." class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <h3>Thomas L.</h3>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
+                <p class="testimonial-text">"J'ai confié ma Tesla Model 3 en mandat, et elle est partie au prix que je voulais. L'équipe est professionnelle et réactive."</p>
+                <div class="testimonial-car">Tesla Model 3 - 2021</div>
             </div>
+
             <div class="testimonial-card">
-                <div class="stars">★★★★★</div>
-                <p>"Très satisfait de l'estimation. Prix conforme au marché."</p>
-                <div class="client-info">
-                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Thomas B.">
-                    <span>Thomas B.</span>
+                <div class="testimonial-header">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophie M." class="testimonial-avatar">
+                    <div class="testimonial-info">
+                        <h3>Sophie M.</h3>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
+                <p class="testimonial-text">"Service exceptionnel ! Ma Peugeot 308 a été vendue en une semaine à un très bon prix. Un grand merci à toute l'équipe."</p>
+                <div class="testimonial-car">Peugeot 308 - 2019</div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq">
-        <h2>Questions fréquentes</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Comment est calculée l'estimation de ma voiture ?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Notre équipe d'experts utilise les données du marché en temps réel, l'état du véhicule et son historique pour établir une estimation précise.</p>
-                </div>
+    <!-- Section 6 - Formulaire de contact -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Contactez-nous dès maintenant</h2>
+                <p class="contact-subtitle">Recevez une estimation personnalisée sous 24h</p>
             </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Combien coûte l'estimation ?</h3>
-                    <i class="fas fa-chevron-down"></i>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-sections">
+                    <!-- Informations personnelles -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user-circle"></i> Vos informations</h3>
+                        <div class="form-group">
+                            <label for="name">Nom & Prénom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Ville / Code postal</label>
+                            <input type="text" id="location" name="location" required>
+                        </div>
+                    </div>
+
+                    <!-- Informations du véhicule -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-car"></i> Votre véhicule</h3>
+                        <div class="form-group">
+                            <label for="request-type">Type de service souhaité</label>
+                            <select id="request-type" name="request-type" required>
+                                <option value="">Sélectionnez une option</option>
+                                <option value="rachat">Rachat Cash Immédiat</option>
+                                <option value="mandat">Vente par Mandat Premium</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="car-model">Marque & Modèle</label>
+                            <input type="text" id="car-model" name="car-model" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="year">Année</label>
+                                <input type="number" id="year" name="year" min="1900" max="2025" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mileage">Kilométrage</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="mileage" name="mileage" required>
+                                    <span class="unit">km</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Commentaires additionnels -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-info-circle"></i> Informations complémentaires</h3>
+                        <div class="form-group">
+                            <label for="comment">Commentaire (optionnel)</label>
+                            <textarea id="comment" name="comment" rows="4" placeholder="État général, options, historique..."></textarea>
+                        </div>
+                        <div class="form-group consent-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <span class="checkbox-text">J'accepte qu'Autovisy traite mes données pour me recontacter*</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    <p>L'estimation est totalement gratuite et sans engagement de votre part.</p>
+
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="btn-icon"></span>
+                        Recevoir mon estimation
+                    </button>
+                    <p class="form-notice">* Réponse garantie sous 24h. Vos données restent confidentielles.</p>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Dans quel délai vais-je recevoir l'estimation ?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Vous recevrez une estimation détaillée sous 24h maximum après l'envoi de votre demande.</p>
-                </div>
-            </div>
+            </form>
         </div>
     </section>
 
-
-    <!-- Features Section -->
-    <section class="features">
-        <h2>Nos avantages</h2>
-        <div class="features-container">
-            <div class="feature-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Prix du marché</h3>
-                <p>Estimation basée sur les données actuelles du marché</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-clock"></i>
-                <h3>Réponse rapide</h3>
-                <p>Estimation détaillée en moins de 24h</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-check-circle"></i>
-                <h3>Sans engagement</h3>
-                <p>Service gratuit et sans obligation d'achat</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-user-tie"></i>
-                <h3>Experts qualifiés</h3>
-                <p>Une équipe de professionnels à votre service</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="cta-content">
-            <h2>Prêt à connaître la valeur de votre voiture ?</h2>
-            <p>Obtenez une estimation gratuite en moins de 24h</p>
-            <a href="#form" class="cta-button">Estimer ma voiture maintenant</a>
+    <!-- Section 7 - CTA Final -->
+    <section id="final-cta" class="final-cta">
+        <h2>Votre voiture mérite une vente simple et sécurisée.</h2>
+        <div class="cta-buttons">
+            <a href="#contact" class="btn btn-primary">Obtenir une estimation</a>
+            <a href="#contact" class="btn btn-secondary">Confier ma voiture en mandat</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>📞 01 23 45 67 89</p>
-                <p>✉️ contact@estimation-auto.fr</p>
+            <div class="footer-logo">
+                <img src="assets/images.png" alt="Logo Autovisy" class="logo">
             </div>
-            <div class="footer-section">
-                <h4>Liens utiles</h4>
-                <ul>
-                    <li><a href="#form">Estimation gratuite</a></li>
-                    <li><a href="#">À propos</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
+            <div class="footer-contact">
+                <p><i class="fas fa-phone"></i> <a href="tel:+33000000000">+33 0 00 00 00 00</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:contact@autovisy.fr">contact@autovisy.fr</a></p>
             </div>
-            <div class="footer-section">
-                <h4>Suivez-nous</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Estimation Auto. Tous droits réservés.</p>
-            <p><a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+            <div class="footer-legal">
+                <a href="#">Mentions légales</a>
+                <a href="#">CGV</a>
+            </div>
         </div>
     </footer>
 
