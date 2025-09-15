@@ -64,17 +64,165 @@ function initMobileMenu() {
         body.classList.toggle('menu-open');
     });
     
+    // Gestion du téléchargement des fichiers
+    const fileInput = document.getElementById('photos');
+    const fileList = document.getElementById('file-list');
+
+    if (fileInput && fileList) {
+        fileInput.addEventListener('change', (e) => {
+            // Limite à 5 fichiers
+            if (fileInput.files.length > 5) {
+                alert('Vous ne pouvez télécharger que 5 fichiers maximum.');
+                fileInput.value = '';
+                return;
+            }
+            
+            // Vider la liste actuelle
+            fileList.innerHTML = '';
+            
+            // Afficher les fichiers sélectionnés
+            Array.from(fileInput.files).forEach((file, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                
+                const fileName = document.createElement('span');
+                fileName.className = 'file-name';
+                fileName.textContent = file.name;
+                
+                const fileIcon = document.createElement('i');
+                fileIcon.className = 'fas fa-file-image';
+                
+                const removeBtn = document.createElement('span');
+                removeBtn.className = 'file-remove';
+                removeBtn.innerHTML = '&times;';
+                removeBtn.onclick = () => removeFile(index);
+                
+                fileItem.appendChild(fileIcon);
+                fileItem.appendChild(fileName);
+                fileItem.appendChild(removeBtn);
+                
+                fileList.appendChild(fileItem);
+                
+                // Afficher un aperçu de l'image
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        const preview = document.createElement('img');
+                        preview.src = e.target.result;
+                        preview.style.maxWidth = '100%';
+                        preview.style.maxHeight = '150px';
+                        preview.style.marginTop = '0.5rem';
+                        preview.style.borderRadius = '4px';
+                        fileItem.appendChild(preview);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+        
+        // Gestion du glisser-déposer
+        const fileLabel = document.querySelector('.file-label');
+        
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            fileLabel.addEventListener(eventName, preventDefaults, false);
+        });
+        
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        ['dragenter', 'dragover'].forEach(eventName => {
+            fileLabel.addEventListener(eventName, highlight, false);
+        });
+        
+        ['dragleave', 'drop'].forEach(eventName => {
+            fileLabel.addEventListener(eventName, unhighlight, false);
+        });
+        
+        function highlight() {
+            fileLabel.style.borderColor = 'var(--color-gold)';
+            fileLabel.style.backgroundColor = 'rgba(201, 169, 92, 0.1)';
+        }
+        
+        function unhighlight() {
+            fileLabel.style.borderColor = '#ddd';
+            fileLabel.style.backgroundColor = '#f9f9f9';
+        }
+        
+        fileLabel.addEventListener('drop', handleDrop, false);
+        
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            fileInput.files = files;
+            // Déclencher manuellement l'événement change
+            const event = new Event('change');
+            fileInput.dispatchEvent(event);
+        }
+    }
+
+    // Fonction pour supprimer un fichier
+    function removeFile(index) {
+        const dt = new DataTransfer();
+        const input = document.getElementById('photos');
+        const { files } = input;
+        
+        for (let i = 0; i < files.length; i++) {
+            if (index !== i) {
+                dt.items.add(files[i]);
+            }
+        }
+        
+        input.files = dt.files;
+        
+        // Déclencher manuellement l'événement change
+        const event = new Event('change');
+        input.dispatchEvent(event);
+    }
+
     // Fermer le menu au clic sur un lien
-    const navLinks = mainNav.querySelectorAll('a');
-    navLinks.forEach(link => {
+    document.querySelectorAll('.main-nav a').forEach(link => {
         link.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            mainNav.classList.remove('active');
-            overlay.classList.remove('active');
-            body.classList.remove('menu-open');
+            document.querySelector('.menu-toggle').classList.remove('active');
+            document.querySelector('.main-nav').classList.remove('active');
         });
     });
-    
+
+    // Gestion de la FAQ
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            // Fermer tous les autres éléments FAQ
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Basculer l'élément actuel
+            item.classList.toggle('active');
+            
+            // Fermer l'élément si on clique à nouveau sur la même question
+            const isActive = item.classList.contains('active');
+            if (!isActive) {
+                item.classList.remove('active');
+            }
+        });
+    });
+
+    // Fermer la FAQ quand on clique en dehors
+    window.addEventListener('click', (e) => {
+        if (!e.target.closest('.faq-item') && !e.target.closest('.faq-question')) {
+            faqItems.forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+    });
+
     // Fermer le menu au clic sur l'overlay
     overlay.addEventListener('click', () => {
         menuToggle.classList.remove('active');
@@ -117,16 +265,9 @@ function handleScroll() {
     
     if (!ticking) {
         window.requestAnimationFrame(function() {
-            // Gestion de la visibilité du logo
-            if (heroSection) {
-                const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-                if (currentScroll >= heroBottom) {
-                    // En dehors du hero, on montre le logo
-                    logo.classList.remove('hidden');
-                } else {
-                    // Dans le hero, on cache le logo
-                    logo.classList.add('hidden');
-                }
+            // On garde toujours le logo visible
+            if (logo) {
+                logo.classList.remove('hidden');
             }
             
             if (currentScroll <= headerHeight) {

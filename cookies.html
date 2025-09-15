@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique des Cookies - Autovisy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .legal-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 25px;
+            line-height: 1.8;
+            color: #2d3748;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .legal-content h1 {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin: 60px 0 40px 0;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .legal-content h1:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #D4AF37, #F1C40F);
+            border-radius: 3px;
+        }
+        
+        .legal-section {
+            margin-bottom: 50px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .legal-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        .legal-section h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .legal-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #D4AF37, #F1C40F);
+            border-radius: 3px;
+        }
+        
+        .legal-section h3 {
+            color: #2d3748;
+            margin: 30px 0 15px;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        
+        .legal-section p, 
+        .legal-section ul, 
+        .legal-section ol, 
+        .legal-section table {
+            margin-bottom: 20px;
+            color: #4a5568;
+            font-size: 1.05em;
+        }
+        
+        .legal-section ul, 
+        .legal-section ol {
+            padding-left: 25px;
+        }
+        
+        .legal-section li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .legal-section li:before {
+            content: '•';
+            color: #D4AF37;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
+        }
+        
+        .legal-section a {
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            border-bottom: 1px dashed #90cdf4;
+            padding-bottom: 1px;
+        }
+        
+        .legal-section a:hover {
+            color: #2c5282;
+            border-bottom-style: solid;
+        }
+        
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .cookie-table th, 
+        .cookie-table td {
+            border: 1px solid #e2e8f0;
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .cookie-table th {
+            background-color: #f7fafc;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .cookie-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        .cookie-essential {
+            background-color: #f0fff4 !important;
+        }
+        
+        .cookie-analytics {
+            background-color: #ebf8ff !important;
+        }
+        
+        .cookie-marketing {
+            background-color: #fffaf0 !important;
+        }
+        
+        .cookie-preferences {
+            background-color: #fff5f5 !important;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .legal-content {
+                padding: 30px 15px;
+            }
+            
+            .legal-content h1 {
+                font-size: 2em;
+                margin: 30px 0;
+            }
+            
+            .legal-section {
+                padding: 20px 15px;
+                margin-bottom: 30px;
+            }
+            
+            .legal-section h2 {
+                font-size: 1.5em;
+            }
+            
+            .legal-section h3 {
+                font-size: 1.2em;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- En-tête de navigation -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images.png" alt="Autovisy" class="logo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Vendre mon véhicule</a></li>
+                    <li><a href="recherche.html">Trouver un véhicule</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="legal-content">
+        <h1>Politique des Cookies</h1>
+        
+        <div class="legal-section">
+            <p><em>Dernière mise à jour : [Date]</em></p>
+            <p>Cette politique des cookies explique ce que sont les cookies, comment nous les utilisons sur notre site Autovisy et comment vous pouvez les gérer.</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>1. Qu'est-ce qu'un cookie ?</h2>
+            <p>Un cookie est un petit fichier texte stocké sur votre appareil (ordinateur, tablette, smartphone) lorsque vous visitez un site internet. Les cookies sont largement utilisés pour faire fonctionner les sites web ou les rendre plus efficaces, ainsi que pour fournir des informations aux propriétaires du site.</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>2. Types de cookies que nous utilisons</h2>
+            
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Type de cookie</th>
+                        <th>Finalité</th>
+                        <th>Durée de conservation</th>
+                        <th>Obligatoire</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="cookie-essential">
+                        <td><strong>Cookies essentiels</strong></td>
+                        <td>Nécessaires au fonctionnement du site (mémorisation du panier, connexion sécurisée, etc.)</td>
+                        <td>Jusqu'à la fin de la session</td>
+                        <td>Oui</td>
+                    </tr>
+                    <tr class="cookie-preferences">
+                        <td><strong>Préférences</strong></td>
+                        <td>Mémorisation de vos préférences (langue, paramètres d'affichage)</td>
+                        <td>1 an</td>
+                        <td>Non</td>
+                    </tr>
+                    <tr class="cookie-analytics">
+                        <td><strong>Analyse d'audience</strong></td>
+                        <td>Mesure de fréquentation, statistiques de navigation</td>
+                        <td>13 mois</td>
+                        <td>Non</td>
+                    </tr>
+                    <tr class="cookie-marketing">
+                        <td><strong>Publicité ciblée</strong></td>
+                        <td>Personnalisation des publicités en fonction de votre navigation</td>
+                        <td>6 mois</td>
+                        <td>Non</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Réseaux sociaux</strong></td>
+                        <td>Partage de contenu sur les réseaux sociaux</td>
+                        <td>Variable selon le réseau</td>
+                        <td>Non</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="legal-section">
+            <h2>3. Cookies tiers</h2>
+            <p>Certains cookies sont placés par des services tiers qui apparaissent sur nos pages, notamment :</p>
+            <ul>
+                <li><strong>Google Analytics</strong> : Analyse d'audience</li>
+                <li><strong>Facebook Pixel</strong> : Publicité ciblée</li>
+                <li><strong>YouTube</strong> : Intégration de vidéos</li>
+                <li><strong>Google Maps</strong> : Affichage de cartes interactives</li>
+            </ul>
+            <p>Nous n'avons pas de contrôle sur ces cookies tiers. Pour plus d'informations, veuillez consulter les politiques de confidentialité respectives de ces services.</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>4. Gestion des cookies</h2>
+            <h3>4.1. Paramètres du navigateur</h3>
+            <p>Vous pouvez configurer votre navigateur pour :</p>
+            <ul>
+                <li>Accepter ou refuser les cookies</li>
+                <li>Vous avertir avant d'accepter un cookie</li>
+                <li>Désactiver les cookies par défaut</li>
+                <li>Supprimer régulièrement les cookies</li>
+            </ul>
+            
+            <h3>4.2. Liens vers les paramètres des navigateurs courants</h3>
+            <ul>
+                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank">Chrome</a></li>
+                <li><a href="https://support.mozilla.org/fr/kb/activer-desactiver-cookies" target="_blank">Firefox</a></li>
+                <li><a href="https://support.apple.com/fr-fr/guide/safari/sfri11471/mac" target="_blank">Safari</a></li>
+                <li><a href="https://support.microsoft.com/fr-fr/microsoft-edge/supprimer-les-cookies-dans-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank">Edge</a></li>
+                <li><a href="https://help.opera.com/en/latest/web-preferences/#cookies" target="_blank">Opera</a></li>
+            </ul>
+            
+            <h3>4.3. Outils de gestion des cookies</h3>
+            <p>Vous pouvez également gérer vos préférences en matière de cookies via des plateformes de gestion des préférences :</p>
+            <ul>
+                <li><a href="https://www.youronlinechoices.com/" target="_blank">Your Online Choices</a></li>
+                <li><a href="https://optout.aboutads.info/" target="_blank">Digital Advertising Alliance</a></li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>5. Conséquences de la désactivation des cookies</h2>
+            <p>La désactivation de certains cookies peut affecter votre expérience de navigation :</p>
+            <ul>
+                <li>Impossibilité d'accéder à certaines fonctionnalités du site</li>
+                <li>Affichage de contenu non personnalisé</li>
+                <li>Réinitialisation de vos préférences à chaque visite</li>
+                <li>Perturbation des services nécessitant une authentification</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>6. Modifications de la politique des cookies</h2>
+            <p>Nous nous réservons le droit de modifier cette politique à tout moment pour nous conformer aux évolutions légales ou techniques. Les modifications prendront effet dès leur publication sur notre site.</p>
+            <p>Nous vous conseillons de consulter régulièrement cette page pour prendre connaissance des éventuelles mises à jour.</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>7. Nous contacter</h2>
+            <p>Pour toute question concernant cette politique des cookies, vous pouvez nous contacter :</p>
+            <p>
+                Par email : dpo@autovisy.fr<br>
+                Par courrier : [Adresse complète du service protection des données]<br>
+                Par téléphone : [Numéro de téléphone]
+            </p>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/images.png" alt="Logo Autovisy" class="logo">
+            </div>
+            <div class="footer-contact">
+                <p><i class="fas fa-phone"></i> <a href="tel:+33668952020">06 68 95 20 20</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:contact@autovisy.fr">contact@autovisy.fr</a></p>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-legal">
+                <div class="legal-links">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="cgv.html">CGV</a>
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                    <a href="cookies.html">Politique des cookies</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 Autovisy - Tous droits réservés
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

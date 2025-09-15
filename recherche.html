@@ -113,8 +113,6 @@
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="testimonial-header">
-                    <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');">
-                    </div>
                     <div class="testimonial-info">
                         <h3>Bastien H.</h3>
                         <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -126,8 +124,6 @@
 
             <div class="testimonial-card">
                 <div class="testimonial-header">
-                    <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1504593811423-6dd665756598?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');">
-                    </div>
                     <div class="testimonial-info">
                         <h3>Idriss M.</h3>
                         <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -139,8 +135,6 @@
 
             <div class="testimonial-card">
                 <div class="testimonial-header">
-                    <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80');">
-                    </div>
                     <div class="testimonial-info">
                         <h3>Melissa J.</h3>
                         <div class="stars">⭐⭐⭐⭐⭐</div>
@@ -168,15 +162,7 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="marque">Marque</label>
-                                <select id="marque" name="marque">
-                                    <option value="">Toutes marques</option>
-                                    <option value="audi">Audi</option>
-                                    <option value="bmw">BMW</option>
-                                    <option value="mercedes">Mercedes</option>
-                                    <option value="peugeot">Peugeot</option>
-                                    <option value="renault">Renault</option>
-                                    <option value="volkswagen">Volkswagen</option>
-                                </select>
+                                <input type="text" id="marque" name="marque" placeholder="Toutes marques">
                             </div>
                             <div class="form-group">
                                 <label for="modele">Modèle</label>
@@ -185,46 +171,22 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="prix-min">Prix min</label>
-                                <select id="prix-min" name="prix-min">
-                                    <option value="">Pas de minimum</option>
-                                    <option value="5000">5 000 €</option>
-                                    <option value="10000">10 000 €</option>
-                                    <option value="15000">15 000 €</option>
-                                    <option value="20000">20 000 €</option>
-                                </select>
+                                <label for="prix-min">Prix min (€)</label>
+                                <input type="number" id="prix-min" name="prix-min" min="0" placeholder="Prix minimum">
                             </div>
                             <div class="form-group">
-                                <label for="prix-max">Prix max</label>
-                                <select id="prix-max" name="prix-max">
-                                    <option value="">Pas de maximum</option>
-                                    <option value="10000">10 000 €</option>
-                                    <option value="15000">15 000 €</option>
-                                    <option value="20000">20 000 €</option>
-                                    <option value="30000">30 000 €</option>
-                                </select>
+                                <label for="prix-max">Prix max (€)</label>
+                                <input type="number" id="prix-max" name="prix-max" min="0" placeholder="Prix maximum">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="annee-min">Année min</label>
-                                <select id="annee-min" name="annee-min">
-                                    <option value="">Toutes années</option>
-                                    <option value="2020">2020</option>
-                                    <option value="2018">2018</option>
-                                    <option value="2015">2015</option>
-                                    <option value="2010">2010</option>
-                                </select>
+                                <input type="number" id="annee-min" name="annee-min" min="1990" max="2025" placeholder="Année minimum">
                             </div>
                             <div class="form-group">
-                                <label for="kilometrage-max">Kilométrage max</label>
-                                <select id="kilometrage-max" name="kilometrage-max">
-                                    <option value="">Tous kilométrages</option>
-                                    <option value="20000">20 000 km</option>
-                                    <option value="50000">50 000 km</option>
-                                    <option value="100000">100 000 km</option>
-                                    <option value="150000">150 000 km</option>
-                                </select>
+                                <label for="kilometrage-max">Kilométrage max (km)</label>
+                                <input type="number" id="kilometrage-max" name="kilometrage-max" min="0" placeholder="Kilométrage maximum">
                             </div>
                         </div>
                         <div class="form-group">
@@ -316,13 +278,89 @@
         </div>
     </section>
 
-    <!-- Section 7 - CTA Final -->
+    <!-- Section FAQ -->
+    <section id="faq" class="faq" style="background-color: white;">
+        <h2>Questions fréquentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Comment se déroule l'estimation de mon véhicule ?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Notre estimation est rapide et précise. Il vous suffit de nous fournir les détails de votre véhicule via notre formulaire en ligne. Notre équipe d'experts analyse votre demande et vous fait une offre sous 24h. Pour une évaluation plus précise, nous pouvons également organiser une inspection physique de votre véhicule.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Combien de temps prend la vente de mon véhicule ?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Pour un rachat cash, la vente peut être finalisée en 24 à 48h après acceptation de l'offre. Pour une vente par mandat, le délai moyen est de 15 à 30 jours selon le modèle et le prix du véhicule. Nous nous engageons à vous tenir informé à chaque étape du processus.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Quels documents sont nécessaires pour vendre mon véhicule ?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Les documents nécessaires sont : la carte grise à votre nom, votre pièce d'identité, le certificat de non-gage de moins de 15 jours, le carnet d'entretien si disponible, et la dernière quittance de contrôle technique si celui-ci a plus de 6 mois. Notre équipe vous accompagne dans le rassemblement de ces documents.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Proposez-vous un service de reprise de véhicule endommagé ou accidenté ?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Oui, nous rachetons tous types de véhicules, y compris les véhicules accidentés, endommagés ou en panne. Même si votre voiture ne roule plus, nous pouvons vous faire une offre intéressante. N'hésitez pas à nous contacter pour une évaluation personnalisée.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Comment est garantie la sécurité du paiement ?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>La sécurité de nos clients est notre priorité. Les paiements s'effectuent uniquement par virement bancaire sécurisé ou chèque de banque, et ce uniquement après la signature du bordereau de vente et la remise du véhicule. Nous ne procédons jamais à des paiements en espèces pour des raisons de sécurité.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Proposez-vous un service de rachat avec reprise de crédit ?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Oui, nous proposons des solutions de rachat de véhicule même s'il est encore en cours de financement. Nous pouvons nous charger du remboursement anticipé du crédit et vous proposer une solution personnalisée. Contactez-nous pour une étude de dossier sans engagement.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Quelle est la différence entre un rachat cash et une vente par mandat ?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Le rachat cash est une vente immédiate : nous vous rachetons votre véhicule directement. La vente par mandat, quant à elle, nous permet de mettre en valeur votre véhicule sur notre réseau de professionnels pour obtenir le meilleur prix, avec une commission réduite. Nous vous conseillerons sur la solution la plus adaptée à votre situation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section CTA Final -->
     <section id="alerte" class="final-cta">
         <h2>Vous ne trouvez pas votre bonheur ?</h2>
         <p>Créez une alerte et soyez le premier informé quand un véhicule correspondant à vos critères sera disponible.</p>
         <div class="cta-buttons">
             <a href="#recherche" class="btn btn-primary">Créer une alerte</a>
-            <a href="tel:+33123456789" class="btn btn-secondary">Nous appeler</a>
+            <a href="tel:+33668952020" class="btn btn-secondary">Nous appeler</a>
         </div>
     </section>
 
@@ -333,7 +371,7 @@
                 <img src="assets/images.png" alt="Logo Autovisy" class="logo">
             </div>
             <div class="footer-contact">
-                <p><i class="fas fa-phone"></i> <a href="tel:+33000000000">+33 0 00 00 00 00</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+33668952020">06 68 95 20 20</a></p>
                 <p><i class="fas fa-envelope"></i> <a href="mailto:contact@autovisy.fr">contact@autovisy.fr</a></p>
             </div>
             <div class="footer-social">
@@ -342,12 +380,83 @@
                 <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
             </div>
             <div class="footer-legal">
-                <a href="#">Mentions légales</a>
-                <a href="#">CGV</a>
+                <div class="legal-links">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="cgv.html">CGV</a>
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                    <a href="cookies.html">Politique des cookies</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 Autovisy - Tous droits réservés
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Bouton WhatsApp flottant -->
+    <a href="#" id="whatsapp-button" class="whatsapp-button" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #FFD700 100%);
+            color: #1a1a1a;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 36px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            text-decoration: none;
+            border: none;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+            animation: none;
+        }
+        
+        .whatsapp-button i {
+            margin-top: 2px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+            }
+        }
+    </style>
+    
+    <script>
+        // Mettez à jour ce lien avec votre numéro de téléphone et votre message par défaut
+        document.getElementById('whatsapp-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            // Numéro au format international sans le signe +
+            const phoneNumber = '33668952020';
+            const message = encodeURIComponent('Bonjour, je souhaite obtenir plus d\'informations sur vos véhicules disponibles.');
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+        });
+    </script>
 </body>
 </html>
